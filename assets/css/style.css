@@ -116,17 +116,28 @@ main {
 .education_description {
   text-align: center;
 }
-
-.projects_wrapper {
+#projects {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
+
+.projects_wrapper {
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-gap: 30px;
+  place-items: center;
+}
+
+
+
 
 .projects_card {
   background-color: var(--background-ligth);
   width: 340px;
-  margin-bottom: 30px;
+  /* margin: auto; */
+  height: 100%;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -214,8 +225,6 @@ footer {
 
 .about_text {
   color: var(--paragrahp);
-  font-size: 0.9rem;
-  font-weight: 300;
 }
 
 .experience_title {
@@ -651,7 +660,11 @@ transform: rotate(-45deg);
     justify-content: left;
   }
 
-  .projects_wrapper {
-    justify-content: space-between;
+  /* .projects_wrapper { 
   }
+
+  .projects_card:last-child {
+  margin-right: auto;
+} */
+
 }
