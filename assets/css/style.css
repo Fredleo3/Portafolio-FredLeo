@@ -132,6 +132,10 @@ main {
   border-radius: 10px;
 }
 
+.projects_card a {
+  text-decoration: none;
+}
+
 .projects_card-image {
   max-width: 100%;
   max-height: 200px;
@@ -144,9 +148,8 @@ main {
     max-height: 100%; 
 }
 
-
 .projects_card-content {
-  padding: 10px 30px 20px 30px;
+  padding: 20px 30px 25px 30px;
 }
 
 footer {
@@ -258,9 +261,10 @@ footer {
 .skills_description {
   text-align: center;
   color: var(--paragrahp);
-  font-weight: 700;
+  font-weight: 700; 
+  font-family: "Raleway", sans-serif;  
+  margin: auto;
   margin-bottom: 40px;
-  font-family: "Raleway", sans-serif;
 }
 
 .skills_description span {
@@ -399,6 +403,11 @@ li span.material-symbols-outlined:hover {
   list-style: none;
 }
 
+.experience_list-job {
+  display: flex;
+  flex-direction: column;
+}
+
 .experience_list-activities {
   margin-left: 20px;
   list-style: disc;
@@ -412,6 +421,10 @@ li span.material-symbols-outlined:hover {
 
 .skills_software {
   list-style: none;
+}
+
+.skills_description {
+  max-width: 400px;
 }
 
 .education_list {
@@ -428,8 +441,9 @@ li span.material-symbols-outlined:hover {
 .projects_software-list {
   list-style: none;
   display: flex;
-  gap: 10px;
-  margin: 10px 0 40px 0;
+  gap: 6px;
+  margin-top: 15px;
+  flex-wrap: wrap;
 }
 
 .projects_software {
@@ -474,8 +488,7 @@ transform: rotate(45deg);
 transform: rotate(-45deg);
 }
 
-
-.projects_btnMore {
+/* .projects_btnMore {
   width: 100%;
   background-color: var(--accent-color);
   border: none;
@@ -485,7 +498,7 @@ transform: rotate(-45deg);
   color: var(--background);
   position: relative;
   bottom: 0;
-}
+} */
 
 /* Lines _____________________________________________________________________________ */
 
@@ -586,37 +599,55 @@ transform: rotate(-45deg);
     gap: 70px;
   }
 
+  .experience_list-job {
+    flex-direction: row;
+    gap: 60px;
+}
+
+.experience_list-date--wrapper {
+  flex-basis: 40%;
+}
+
+.experience_list-description--wrapper {
+  flex-basis: 60%;
+}
+
+.experience_list-date {
+  text-align: right;
+}
+
+
   .skills_software li {
     flex-direction: row;
     gap: 50px;
     align-items: center;
   }
 
+.skills_software-category {
+    text-align: right;
+    flex-basis: 40%;
+  }
+
   .skills_software-wrapper {
-    flex-basis: 50%;
+    flex-basis: 60%;
     justify-content: left;
     gap: 30px;
   }
 
-  .skills_software-category {
-    text-align: right;
-    flex-basis: 50%;
-  }
-
-  .education_item {
-    flex-direction: row;
-    gap: 40px;
-  }
-
   .education_logo {
-    flex-basis: 50%;
+    flex-basis: 40%;
     justify-content: right;
     text-align: right;
   }
 
+  .education_item {
+    flex-direction: row;
+    gap: 60px;
+  }
+
   .education_description {
     text-align: left;
-    flex-basis: 50%;
+    flex-basis: 60%;
     justify-content: left;
   }
 
